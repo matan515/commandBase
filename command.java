@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 public class command {
 
-    static ScheduledExecutorService service = Executors.newScheduledThreadPool(0);
+    static ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
 
     static ScheduledFuture<?> task;
 
@@ -24,6 +24,10 @@ public class command {
 
     public boolean isFinished(){
         return false;
+    }
+
+    public interface Runnable{
+        
     }
 
     public void run(){
